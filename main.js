@@ -92,6 +92,7 @@ if(message.content.startsWith(prefix + "setavatar")){
                 message.channel.send(`:x: | ${message.author} tu n'est pas dans le support du bot.`)
                 return;
                 }
+            }
             //reload
             if(message.content === prefix + "reload"){
             if(message.author.id === "317221808405348364" || message.author.id === "169146903462805504" || message.author.id === "306119836503900161"){
@@ -106,6 +107,6 @@ if(message.content.startsWith(prefix + "setavatar")){
                 return;
                 }
         }
-    }
+    
 });
 client.login(process.env.Discord_token || process.agrv[2]);
