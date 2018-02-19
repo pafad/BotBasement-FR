@@ -31,15 +31,6 @@ client.on('message', message => {
   }
 //support
 if (message.content === prefix + "support"){
-        if (!args) return message.channel.send("** ❌ | Merci de me dire le bug ou la question**");
-            message.channel.send("**☑ Votre report a été envoyé** : " + args)
-            var support_embed = new Discord.RichEmbed()
-            .setTitle(message.author.username + "#" + message.author.discriminator)
-            .setColor('#002AD1')
-            .setAuthor("Support du bot")
-            .setDescription("***Question/bug donné:***\n\n" + args)
-            .setThumbnail(message.author.displayAvatarURL)
-        client.channels.get("414592429161840663").send(support_embed)
 }
 //test
 if(message.content === prefix + "test") {
@@ -48,10 +39,6 @@ message.reply('Je suis reveillé !')
 //api
 if(message.content.startsWith === prefix + "api") {
 message.channel.send(client.ping + "ms") 
-}
-//logs
-if(message.content.startsWith(prefix + "logs")) {
-
 }
 //setavatar
 if(message.content.startsWith(prefix + "setavatar")){
