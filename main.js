@@ -17,11 +17,20 @@ client.on("guildMemberRemove", member =>{
 })
 //début des commandes
 client.on('message', message => {
-//définir "args"
-let args = message.content.split(" ").slice(1).join(" ");
+    if(!message.content.startsWith(prefix))return;
+  // This is the best way to define args. Trust me.
+  const args = message.content.slice(prefix.length).trim().split(/ +/g);
+  const command = args.shift().toLowerCase();
+
+  // The list of if/else is replaced with those simple 2 lines:
+  try {
+    let commandFile = require(`./commandes/${command}.js`);
+    commandFile.run(client, message, args);
+  } catch (err){
+  return;
+  }
 //support
 if (message.content === prefix + "support"){
-        let args = message.content.split(" ").slice(1).join(" ");
         if (!args) return message.channel.send("** ❌ | Merci de me dire le bug ou la question**");
             message.channel.send("**☑ Votre report a été envoyé** : " + args)
             var support_embed = new Discord.RichEmbed()
@@ -42,21 +51,7 @@ message.channel.send(client.ping + "ms")
 }
 //logs
 if(message.content.startsWith(prefix + "logs")) {
-let usermention = message.mentions.users.first()
-if(message.author.id === "317221808405348364" || message.author.id === "169146903462805504" || message.author.id === "306119836503900161"){
-    if (!args) return message.channel.send("** ❌ | Vous n'avez rien noté.**");
-    if(!usermention) return message.channel.send("** ❌ spécifiez une mention d'un bot.**")
-         message.delete();
-        message.channel.send("** :white_check_mark: | Votre message a bel et bien été envoyé.**")
-        var logs_embed = new Discord.RichEmbed()
-            .setColor('RANDOM')
-            .setDescription(message.content.substr(29))
-            .setThumbnail(usermention.avatarURL)
-        client.channels.get("414432717976109062").send(logs_embed)
-    }else{
-    message.channel.send(`:x: | ${message.author} tu n'est pas dans le support du bot.`)
-    return;
-    }
+
 }
 //setavatar
 if(message.content.startsWith(prefix + "setavatar")){
