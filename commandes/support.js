@@ -3,12 +3,18 @@ exports.run = (client, message, args) => {
                 message.channel.send("**☑ Votre report a été envoyé** : " + args)
             client.channels.get("415288257870430208").send({embed:{ color: 0x002AD1,
             author:{
-            name: "Support du bot\n",
+            name: "Support du bot",
             icon_url: client.user.avatarUrl,
             }, 
-            title: "question/bug",
+            title: "",
             url: "",
-            description:"***Question/bug rapporté:***\n\n" + args,
+            fields:[
+                {
+                name:"question/bug",
+                value: "***Question/bug rapporté:***\n\n" + args,
+                inline:false
+                },
+                ],
             footer:{
             icon_url: message.author.avatarUrl,
             text: `une question/bug de ${message.author.username}.`
