@@ -7,7 +7,8 @@ exports.run = (client, message, args) => {
             icon_url: client.avatarUrl
             }, 
             title: "question/bug",
-            url: message.author.avatarUrl,
+            url: "",
+            thumbnail: message.author.avatarUrl,                                                   
             description:"***Question/bug rapporté:***\n\n" + args,
             footer:{
             icon_url: message.author.avatarUrl,
