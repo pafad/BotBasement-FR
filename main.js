@@ -6,6 +6,7 @@ let type = 1;
 client.on("ready", () => {
 console.log('___\nAllumage ou Reboot réussi !\n___\nC\'est allumé ! Le Bots-list va continuer')
 client.user.setPresence({game: { name: "#bots-list || BotsB FR", url: "https://www.twitch.tv/pafad0gaming",type}})
+client.user.setUsername("BotsDataBase FR Bots-list")
 });
 //join
 client.on("guildMemberAdd", member => {
@@ -29,9 +30,6 @@ client.on('message', message => {
   } catch (err){
   return;
   }
-//support
-if (message.content === prefix + "support"){
-}
 //test
 if(message.content === prefix + "test") {
 message.reply('Je suis reveillé !') 
