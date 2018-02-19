@@ -105,5 +105,7 @@ if(message.content.startsWith(prefix + "setavatar")){
                 message.channel.send(`:x: | ${message.author} tu n'est pas dans le support du bot.`)
                 return;
                 }
-        });
+        }
+    }
+});
 client.login(process.env.Discord_token || process.agrv[2]);
