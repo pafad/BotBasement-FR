@@ -92,6 +92,18 @@ if(message.content.startsWith(prefix + "setavatar")){
                 message.channel.send(`:x: | ${message.author} tu n'est pas dans le support du bot.`)
                 return;
                 }
-        }
-});
+            //reload
+            if(message.content === prefix + "reload"){
+            if(message.author.id === "317221808405348364" || message.author.id === "169146903462805504" || message.author.id === "306119836503900161"){
+                message.channel.send("** :white_check_mark: | redémarrage !**")    
+                client.destroy();
+                console.log("le bot se déconetcé")
+                client.login(process.env.Discord_token || process.agrv[2]);
+                console.log("opérationnel")
+                message.channel.send("** :white_check_mark: | je suis de retour !**")
+                }else{
+                message.channel.send(`:x: | ${message.author} tu n'est pas dans le support du bot.`)
+                return;
+                }
+        });
 client.login(process.env.Discord_token || process.agrv[2]);
