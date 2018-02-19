@@ -4,7 +4,7 @@ exports.run = (client, message, args) => {
             client.channels.get("415288257870430208").send({embed:{ color: 0x002AD1,
             author:{
             name: "Support du bot\n",
-            icon_url: client.avatarUrl
+            icon_url: client.user.avatarUrl,
             }, 
             title: "question/bug",
             url: "",
