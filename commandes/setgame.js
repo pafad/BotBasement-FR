@@ -4,7 +4,7 @@ if(message.author.id === "317221808405348364" || message.author.id === "16914690
                         message.channel.send("** ❌ | Vous n'avez rien noté.**");
             }else{
                 message.delete();
-                client.user.setPresence({game:{name: `#bot-list || ${args}`, url:"https://www.twitch.tv/pafad0gaming",type}})
+                client.user.setPresence({game:{name: `#bot-list || ${message.content.substr(9)}`, url:"https://www.twitch.tv/pafad0gaming",type}})
                 message.channel.send("** :white_check_mark: | Jeu changé !**")
             }else{
             message.channel.send(`:x: | ${message.author} tu n'est pas dans le support du bot.`)
