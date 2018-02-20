@@ -1,9 +1,10 @@
 exports.run = (client, message) => {
 message.channel.send(":white_check_mark:  | help envoyé en mp.")
 message.author.send({embed:
-    { color: 0x00e0ff, author: {
+    { color: 0x00e0ff, 
+      author: {
       name: `menu de ${client.user.tag}`,
-        icon_url: client.avatarUrl,
+      icon_url: client.avatarUrl,
     },
       title: '',
       url: '',
