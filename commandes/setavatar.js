@@ -3,7 +3,7 @@ if(message.author.id === "317221808405348364" || message.author.id === "16914690
         if (!args) return message.channel.send("** ❌ | Vous n'avez rien noté.**");
             message.delete();
             client.user.setAvatar(args);
-            message.channel.send("** :white_check_mark: | Avatar changé !**").catch(console.error)
+            message.channel.send("** :white_check_mark: | Avatar changé !**")
         }else{
         message.channel.send(`:x: | ${message.author} tu n'est pas dans le support du bot.`)
         return;
