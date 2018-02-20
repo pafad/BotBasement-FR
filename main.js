@@ -30,10 +30,6 @@ client.on('message', message => {
   } catch (err){
   return;
   }
-//test
-if(message.content === prefix + "test") {
-message.reply('Je suis reveillé !') 
-}
 //api
 if(message.content.startsWith === prefix + "api") {
 message.channel.send(client.ping + "ms") 
