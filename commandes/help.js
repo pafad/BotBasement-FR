@@ -6,7 +6,7 @@ message.author.send({embed:
         icon_url: client.avatarUrl,
     },
       title: '',
-      icon_url: message.author.avatarUrl,
+      url: '',
       fields:[
           {
            name: 'Support du bot:',
