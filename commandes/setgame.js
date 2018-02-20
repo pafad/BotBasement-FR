@@ -1,5 +1,5 @@
 exports.run = (client, message, args) => {
-if(message.author.id === "317221808405348364" || message.author.id === "169146903462805504" || message.author.id === "306119836503900161") return message.channel.send(`:x: | ${message.author} tu n'est pas dans le support du bot.`) 
+if(message.author.id !== "317221808405348364" || message.author.id !== "169146903462805504" || message.author.id !== "306119836503900161") return message.channel.send(`:x: | ${message.author} tu n'est pas dans le support du bot.`) 
 if (!args) return message.channel.send("** ❌ | Vous n'avez rien noté.**");
                 message.delete();
                 client.user.setPresence({game:{name: `#bot-list || ${message.content.substr(9)}`, url:"https://www.twitch.tv/pafad0gaming",type}})
