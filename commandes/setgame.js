@@ -1,4 +1,4 @@
-exports.run = (cleint, message, args) => {
+exports.run = (client, message, args) => {
 if(message.author.id === "317221808405348364" || message.author.id === "169146903462805504" || message.author.id === "306119836503900161"){
             if (!args) return message.channel.send("** ❌ | Vous n'avez rien noté.**");
                 message.delete();
