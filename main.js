@@ -30,7 +30,5 @@ client.on('message', message => {
   } catch (err){
   return;
   }
-}
-    
 });
 client.login(process.env.Discord_token || process.agrv[2]);
