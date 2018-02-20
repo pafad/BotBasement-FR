@@ -30,10 +30,6 @@ client.on('message', message => {
   } catch (err){
   return;
   }
-//api
-if(message.content.startsWith === prefix + "api") {
-message.channel.send(client.ping + "ms") 
-}
 //setavatar
 if(message.content.startsWith(prefix + "setavatar")){
     if(message.author.id === "317221808405348364" || message.author.id === "169146903462805504" || message.author.id === "306119836503900161"){
