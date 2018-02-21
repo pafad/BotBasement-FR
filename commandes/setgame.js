@@ -10,4 +10,5 @@ if(!message.author.id === "317221808405348364" || !message.author.id === "169146
   message.delete();
   message.channel.send("** :white_check_mark: | Jeu changé !**")
     }
+  }
 }
