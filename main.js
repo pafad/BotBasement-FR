@@ -13,7 +13,7 @@ client.on("guildMemberAdd", member => {
 })
 //leave
 client.on("guildMemberRemove", member =>{
-    client.channels.get("414429834689773580").send(`${member} a quitté le serveur !`)
+    client.channels.get("414429834689773580").send(`${member.displayName} a quitté le serveur !`)
 })
 //début des commandes
 client.on('message', message => {
