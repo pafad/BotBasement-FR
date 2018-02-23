@@ -1,6 +1,6 @@
 exports.run = (client, message, args) => {
-        if(message.author.id !== '306119836503900161' && message.author.id !=='295908783081914378'){
-            message.channel.send(`<:7orNad0_negative_check_mark:400045843287375873> ${message.author} Tu n'est pas mon developpeur.`)
+        if(message.author.id !== '306119836503900161' && message.author.id !=='295908783081914378' && message.author.id !=='317221808405348364'){
+            message.channel.send(`:x: ${message.author} Tu n'est pas dans le support du bot.`)
             return;
         }else{
                 try {
