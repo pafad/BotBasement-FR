@@ -1,11 +1,11 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
 var prefix = "m-"
-let type = 1;
+let type = 3;
 //client est prêt
 client.on("ready", () => {
 console.log('___\nAllumage ou Reboot réussi !\n___\nC\'est allumé ! Le Bots-list va continuer')
-client.user.setPresence({game: { name: "#bots-list || BotsB FR", url: "https://www.twitch.tv/pafad0gaming",type}})
+client.user.setPresence({game: { name: "#bots-list || BotsB FR", url:"",type}})
 });
 //join
 client.on("guildMemberAdd", member => {
