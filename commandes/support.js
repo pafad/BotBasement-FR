@@ -12,7 +12,7 @@ exports.run = (client, message, args) => {
       fields: [
         {
           name: 'Question/bug',
-          value: `${args}`,
+          value: args,
           inline: true
         },
       ],
