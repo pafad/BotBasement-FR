@@ -1,6 +1,6 @@
 exports.run = (client, message, args) => {
     if (!args) return message.channel.send("** ❌ | Merci de me dire le bug ou la question**");
-                message.channel.send("**☑ Votre report a été envoyé** : " + args)
+                message.channel.send("**☑ Votre report a été envoyé** : " + message.content.substr(10))
             client.channels.get("415288257870430208").send('', { embed: {
       color: 0x002AD1,
       author: {
