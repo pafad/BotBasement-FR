@@ -12,8 +12,8 @@ exports.run = (client, message, args) => {
       fields: [
         {
           name: 'Question/bug',
-          value: args,
-          inline: true
+          value: message.content.substr(10),
+          inline: false
         },
       ],
       footer: {
