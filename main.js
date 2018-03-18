@@ -1,8 +1,8 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
-var prefix = "m-"
 let type = 1;
 var config = require("./config");
+var prefix = config.prefix;
 var blacklisted = config.blacklist;
 //client est prêt
 client.on("ready", () => {
