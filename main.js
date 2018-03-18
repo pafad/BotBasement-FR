@@ -3,7 +3,6 @@ const client = new Discord.Client();
 let type = 1;
 var config = require("./config");
 var prefix = config.prefix;
-var blacklisted = config.blacklist;
 //client est prêt
 client.on("ready", () => {
 console.log('___\nAllumage ou Reboot réussi !\n___\nC\'est allumé ! Le Bots-list va continuer')
@@ -32,6 +31,6 @@ client.on('message', message => {
   return;
   }
   //blacklist:
-    if(message.author.id = blacklisted)return;
+    if(message.author.id === "317221808405348364")return;
 });
 client.login(process.env.Discord_token || process.agrv[2]);
