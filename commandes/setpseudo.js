@@ -1,5 +1,5 @@
 exports.run = (client, message, args) => {
-if(message.author.id === "317221808405348364" || message.author.id === "169146903462805504" || message.author.id === "306119836503900161"){
+if(message.author.id === "317221808405348364" || message.author.id === "169146903462805504" || message.author.id === "377925283098918912"){
 if (!args) return message.channel.send("** ❌ | Vous n'avez rien noté.**");
            message.delete();
            client.user.setUsername(`${args} Bots-List`)
