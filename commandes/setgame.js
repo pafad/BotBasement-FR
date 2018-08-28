@@ -7,6 +7,5 @@ exports.run = (client, message, args) => {
     }else{
               message.channel.send(`:x: | ${message.author} tu n'est pas dans le support du bot.`)
               return;
-           }
       }
  }
