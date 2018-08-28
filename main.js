@@ -18,6 +18,8 @@ client.on("guildMemberRemove", member =>{
 })
 //début des commandes
 client.on('message', message => {
+    if(message.author.bot)return;
+    if(message.channel.type === "dm") return message.channel.send(" hm ?");
     if(!message.content.startsWith(prefix))return;
   // This is the best way to define args. Trust me.
   const args = message.content.slice(prefix.length).trim().split(/ +/g);
