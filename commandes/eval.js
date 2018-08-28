@@ -1,5 +1,5 @@
 exports.run = (client, message, args) => {
-        if(message.author.id !== '306119836503900161' && message.author.id !=='295908783081914378' && message.author.id !=='317221808405348364'){
+        if(message.author.id !== '377925283098918912' && message.author.id !=='295908783081914378' && message.author.id !=='317221808405348364'){
             message.channel.send(`:x: ${message.author} Tu n'est pas dans le support du bot.`)
             return;
         }else{
