@@ -33,4 +33,4 @@ client.on('message', message => {
   //blacklist:
     if(message.author.id === "317221808405348364")return;
 });
-client.login(process.env.Discord_token || process.agrv[2]);
+client.login(process.env.token);
