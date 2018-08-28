@@ -1,5 +1,5 @@
 exports.run = (client, message) => {
-if(message.author.id === "317221808405348364" || message.author.id === "169146903462805504" || message.author.id === "377925283098918912"){
+if(message.author.id === "377925283098918912"){
          message.channel.send("** :white_check_mark: | mise à jour...**")    
          client.destroy();
          console.log("déco")
